@@ -1,14 +1,10 @@
-package br.com.levpatrim.model.network.responses
+package br.com.levpatrim.model.network
 
 import android.content.Context
 import android.net.ConnectivityManager
-import android.util.Log
 import br.com.levpatrim.util.NoInternetException
-import dagger.Provides
 import okhttp3.Interceptor
 import okhttp3.Response
-import javax.inject.Inject
-import javax.inject.Singleton
 
 class NetworkConnectionInterceptor(context: Context) : Interceptor {
     private val applicationContext = context.applicationContext

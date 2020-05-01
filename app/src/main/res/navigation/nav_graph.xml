@@ -11,4 +11,9 @@
         android:name="br.com.levpatrim.view.home.profile.ProfileFragment"
         android:label="Profile Main"
         tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/quotesFragment"
+        android:name="br.com.levpatrim.view.home.quotes.QuotesFragment"
+        android:label="Quotes"
+        tools:layout="@layout/quotes_fragment" />
 </navigation>

@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import br.com.levpatrim.model.db.entities.Quote
 import br.com.levpatrim.model.db.entities.User
 import dagger.Provides
 import javax.inject.Inject
@@ -11,20 +12,19 @@ import javax.inject.Singleton
 
 
 @Database(
-    entities = [User::class],
+    entities = [User::class, Quote::class],
     version = 1
 )
 
-@Singleton
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getUserDao() : UserDao
+    abstract fun getQuoteDao() : QuoteDao
 
     companion object{
 
         @Volatile
         private var instance: AppDatabase? = null
-
         private val LOCK = Any()
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK){

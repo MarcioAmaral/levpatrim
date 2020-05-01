@@ -1,19 +1,15 @@
 package br.com.levpatrim.model.network
 
-import android.util.Log
 import br.com.levpatrim.model.network.responses.AuthResponse
-import br.com.levpatrim.model.network.responses.NetworkConnectionInterceptor
-import dagger.Component
-import dagger.Provides
+import br.com.levpatrim.model.network.responses.QuotesResponse
 import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
-import javax.inject.Inject
-import javax.inject.Singleton
 
 interface MyApi {
 
@@ -31,6 +27,9 @@ interface MyApi {
         @Field("email") email: String,
         @Field("password") password: String
     ) : Response<AuthResponse>
+
+    @GET("quotes")
+    suspend fun getQuotes() : Response<QuotesResponse>
 
     companion object{
 
