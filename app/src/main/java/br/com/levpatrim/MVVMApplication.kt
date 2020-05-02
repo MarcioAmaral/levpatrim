@@ -4,6 +4,7 @@ import android.app.Application
 import br.com.levpatrim.model.db.AppDatabase
 import br.com.levpatrim.model.network.MyApi
 import br.com.levpatrim.model.network.NetworkConnectionInterceptor
+import br.com.levpatrim.model.preferences.PreferenceProvider
 import br.com.levpatrim.model.repositories.QuotesRepository
 import br.com.levpatrim.model.repositories.UserRepository
 import br.com.levpatrim.view.auth.AuthViewModelFactory
@@ -29,8 +30,9 @@ class MVVMApplication : Application(), KodeinAware {
         }
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
+        bind() from singleton { PreferenceProvider(instance()) }
         bind() from singleton { UserRepository(instance(), instance()) }
-        bind() from singleton { QuotesRepository(instance(), instance()) }
+        bind() from singleton { QuotesRepository(instance(), instance(), instance()) }
         bind() from provider { AuthViewModelFactory(instance())  }
         bind() from provider { ProfileViewModelFactory(instance())  }
         bind() from provider { QuotesViewModelFactory(instance()) }
