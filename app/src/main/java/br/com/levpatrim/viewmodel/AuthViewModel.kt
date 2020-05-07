@@ -50,6 +50,7 @@ class AuthViewModel(
     }
 
     fun onSignupButtonClick(view: View) {
+        Log.d("FOLLOWING","Antes 05 - authListener?.onStared()")
         authListener?.onStared()
 
         if (name.isNullOrEmpty()) {
@@ -71,13 +72,18 @@ class AuthViewModel(
             authListener?.onFailure("Password did not match")
             return
         }
-
+        Log.d("FOLLOWING","Antes 06 - Coroutines.main")
         Coroutines.main {
             try {
                 val authResponse = repository.userSignup(name!!, email!!, password!!)
+                Log.d("FOLLOWING","Antes 07 - authResponse.user?.let")
                 authResponse.user?.let {
+                    Log.d("FOLLOWING","Antes 08 - authListener?.onSuccess(it)")
                     authListener?.onSuccess(it)
+                    Log.d("FOLLOWING","Antes 12 - Depois authListener?.onSuccess(it)")
+                    Log.d("FOLLOWING","Antes 13 - Antes repository.saveUser(it)")
                     repository.saveUser(it)
+                    Log.d("FOLLOWING","Antes 14 - Depois repository.saveUser(it)")
                     return@main
                 }
                 authListener?.onFailure(authResponse.message!!)

@@ -4,16 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/profileFragment">
+    app:startDestination="@id/userFragment">
 
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/userFragment"
         android:name="br.com.levpatrim.view.home.profile.ProfileFragment"
         android:label="Profile Main"
         tools:layout="@layout/profile_fragment" />
     <fragment
-        android:id="@+id/quotesFragment"
-        android:name="br.com.levpatrim.view.home.quotes.QuotesFragment"
-        android:label="Quotes"
-        tools:layout="@layout/quotes_fragment" />
+        android:id="@+id/screenUser"
+        android:name="br.com.levpatrim.view.home.user.ScreenUser"
+        android:label="User" />
 </navigation>

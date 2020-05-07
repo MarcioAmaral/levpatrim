@@ -1,7 +1,6 @@
 package br.com.levpatrim.model.network
 
 import br.com.levpatrim.model.network.responses.AuthResponse
-import br.com.levpatrim.model.network.responses.QuotesResponse
 import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -28,8 +27,6 @@ interface MyApi {
         @Field("password") password: String
     ) : Response<AuthResponse>
 
-    @GET("quotes")
-    suspend fun getQuotes() : Response<QuotesResponse>
 
     companion object{
 
