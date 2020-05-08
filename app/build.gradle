@@ -115,6 +115,7 @@ dependencies {
     implementation "com.xwray:groupie-databinding:$groupie_version"
     implementation "com.xwray:groupie:$groupie_version"
     implementation "com.xwray:groupie-databinding:$groupie_version"
+    implementation 'androidx.mediarouter:mediarouter:1.0.0'
 
 
 }

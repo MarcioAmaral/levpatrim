@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">LevPatrim</string>
+    <string name="menuConta">Conta</string>
+    <string name="menuLocal">Local</string>
+    <string name="menuCentro_de_custo">Centro de Custo</string>
+    <string name="menuMarca">Marca</string>
+    <string name="menuModelo">Modelo</string>
+    <string name="menuPlanta">Planta</string>
+    <string name="menuEsp_cie">Espécie</string>
 </resources>
