@@ -15,6 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <activity android:name=".view.levant.LevantCompl01Activity"></activity>
+        <activity android:name=".view.levant.LevantComplActivity" />
+        <activity android:name=".view.levant.LevantActivity" />
+        <activity android:name=".view.conta.ContaActivity" />
         <activity android:name=".view.home.HomeActivity" />
         <activity android:name=".view.auth.SignupActivity" />
         <activity android:name=".view.auth.LoginActivity">

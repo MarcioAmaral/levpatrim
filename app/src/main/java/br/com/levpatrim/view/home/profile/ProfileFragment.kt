@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -30,6 +31,7 @@ class ProfileFragment : Fragment(), KodeinAware {
 
         viewModel = ViewModelProviders.of(this, factory).get(ProfileViewModel::class.java)
 
+        (activity as AppCompatActivity).supportActionBar?.title = "LevPat"
 
         binding.viewmodel = viewModel
         binding.lifecycleOwner = this

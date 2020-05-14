@@ -8,13 +8,25 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="screenUser">
+                  <entry key="menuConta">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="90" />
-                            <option name="y" value="12" />
+                            <option name="x" value="87" />
+                            <option name="y" value="-39" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="menuUser">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-79" />
+                            <option name="y" value="-43" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -25,8 +37,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-162" />
-                            <option name="y" value="16" />
+                            <option name="x" value="-269" />
+                            <option name="y" value="-45" />
                           </Point>
                         </option>
                       </LayoutPositions>

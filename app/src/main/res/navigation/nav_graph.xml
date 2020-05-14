@@ -12,7 +12,12 @@
         android:label="Profile Main"
         tools:layout="@layout/profile_fragment" />
     <fragment
-        android:id="@+id/screenUser"
+        android:id="@+id/menuUser"
         android:name="br.com.levpatrim.view.home.user.ScreenUser"
         android:label="User" />
+    <activity
+        android:id="@+id/menuConta"
+        android:name="br.com.levpatrim.view.conta.ContaActivity"
+        android:label="Conta"
+        tools:layout="@layout/activity_conta" />
 </navigation>

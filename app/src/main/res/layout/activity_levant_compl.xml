@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    tools:context=".view.levant.LevantComplActivity">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="206dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="complTela2"
+        android:text="Complemento"
+        app:icon="@drawable/ic_content_paste_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTag"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/ic_content_paste_black_24dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Empresa Modelo"
+        app:titleMarginStart="100sp"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/textDim"
+        android:layout_width="105dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="80dp"
+        android:text="Dimensão"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editDimen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Dimensão"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textDim"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCap"
+        android:layout_width="88dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:text="Capacidade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDim" />
+
+    <TextView
+        android:id="@+id/textPot"
+        android:layout_width="91dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:text="Potência"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCap" />
+
+    <TextView
+        android:id="@+id/textVazao"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Vazão"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPot" />
+
+    <TextView
+        android:id="@+id/textRpm"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Rpm"
+        app:layout_constraintTop_toBottomOf="@+id/textVazao"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textNPortas"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:text="NPortas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRpm" />
+
+    <TextView
+        android:id="@+id/textNGavetas"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="NGavetas"
+        app:layout_constraintStart_toEndOf="@+id/editNportas"
+        app:layout_constraintTop_toBottomOf="@+id/editRpm" />
+
+    <TextView
+        android:id="@+id/textNPrateleiras"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:text="NPrateleiras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNPortas" />
+
+    <TextView
+        android:id="@+id/textMarca"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRevestimento" />
+
+    <TextView
+        android:id="@+id/textModelo"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Modelo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMarca" />
+
+    <TextView
+        android:id="@+id/textSelic"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Selic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textModelo" />
+
+    <TextView
+        android:id="@+id/textAno"
+        android:layout_width="75dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Ano"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSelic" />
+
+    <TextView
+        android:id="@+id/textTag"
+        android:layout_width="77dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:text="TAG"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAno" />
+
+    <TextView
+        android:id="@+id/textRevestimento"
+        android:layout_width="102dp"
+        android:layout_height="34dp"
+        android:text="Revestimento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNPrateleiras" />
+
+    <EditText
+        android:id="@+id/editCap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Capacidade"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textCap"
+        app:layout_constraintTop_toBottomOf="@+id/editDimen" />
+
+    <EditText
+        android:id="@+id/editVazao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:hint="Vazão"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textVazao"
+        app:layout_constraintTop_toBottomOf="@+id/editPot2" />
+
+    <EditText
+        android:id="@+id/editRpm"
+        android:layout_width="210dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:hint="Rpm"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textRpm"
+        app:layout_constraintTop_toBottomOf="@+id/editVazao" />
+
+    <EditText
+        android:id="@+id/editRevest"
+        android:layout_width="210dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Revestimento"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textRevestimento"
+        app:layout_constraintTop_toBottomOf="@+id/editNprat" />
+
+    <EditText
+        android:id="@+id/editMarca"
+        android:layout_width="210dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Marca"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textMarca"
+        app:layout_constraintTop_toBottomOf="@+id/editRevest" />
+
+    <EditText
+        android:id="@+id/editModelo"
+        android:layout_width="210dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Modelo"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textModelo"
+        app:layout_constraintTop_toBottomOf="@+id/editMarca" />
+
+    <EditText
+        android:id="@+id/editSelic"
+        android:layout_width="210dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Selic"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textSelic"
+        app:layout_constraintTop_toBottomOf="@+id/editModelo" />
+
+    <EditText
+        android:id="@+id/editAno"
+        android:layout_width="146dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Ano"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textAno"
+        app:layout_constraintTop_toBottomOf="@+id/editSelic" />
+
+    <EditText
+        android:id="@+id/editTag"
+        android:layout_width="210dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Tag"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textTag"
+        app:layout_constraintTop_toBottomOf="@+id/editAno" />
+
+    <EditText
+        android:id="@+id/editNportas"
+        android:layout_width="65dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textNPortas"
+        app:layout_constraintTop_toBottomOf="@+id/editRpm" />
+
+    <EditText
+        android:id="@+id/editNprat"
+        android:layout_width="71dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textNPrateleiras"
+        app:layout_constraintTop_toBottomOf="@+id/editNportas" />
+
+    <EditText
+        android:id="@+id/editNGavetas"
+        android:layout_width="65dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textNGavetas"
+        app:layout_constraintTop_toBottomOf="@+id/editRpm" />
+
+    <EditText
+        android:id="@+id/editPot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Potência"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textPot"
+        app:layout_constraintTop_toBottomOf="@+id/editCap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

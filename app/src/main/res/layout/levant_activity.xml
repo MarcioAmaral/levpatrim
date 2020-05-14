@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    android:orientation="vertical"
+    tools:context=".view.levant.LevantActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/ic_content_paste_black_24dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Empresa Modelo"
+        app:titleMarginStart="100sp"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/editPat"
+        android:layout_width="225dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="Patrimônio"
+        android:inputType="textPersonName"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textConta"
+        android:layout_width="81dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:text="Conta"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPat" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinnerConta"
+        android:layout_width="333dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        app:hintText="Selecionar a Conta"
+        app:layout_constraintStart_toEndOf="@+id/textConta"
+        app:layout_constraintTop_toBottomOf="@+id/editPat" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinnerPlanta"
+        android:layout_width="334dp"
+        android:layout_height="41dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        app:hintText="Selecionar a Planta"
+        app:layout_constraintStart_toEndOf="@+id/textPlanta"
+        app:layout_constraintStart_toStartOf="@+id/spinnerLocal"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLocal" />
+
+    <TextView
+        android:id="@+id/textPlanta"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/menuPlanta"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/textLocal"
+        tools:layout_editor_absoluteX="2dp" />
+
+    <TextView
+        android:id="@+id/textLocal"
+        android:layout_width="76dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/menuLocal"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCusto" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinnerLocal"
+        android:layout_width="335dp"
+        android:layout_height="42dp"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:padding="5dp"
+        app:hintText="Selecionar o Local"
+        app:layout_constraintStart_toEndOf="@+id/textLocal"
+        app:layout_constraintStart_toStartOf="@+id/spinnerCusto"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCusto" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinnerCusto"
+        android:layout_width="332dp"
+        android:layout_height="57dp"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:padding="5dp"
+        app:hintText="Selecionar o Custo"
+        app:layout_constraintStart_toEndOf="@+id/textCusto"
+        app:layout_constraintStart_toStartOf="@+id/spinnerConta"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerConta" />
+
+    <TextView
+        android:id="@+id/textCusto"
+        android:layout_width="76dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
+        android:text="C.Custo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textConta" />
+
+    <TextView
+        android:id="@+id/textEspecie"
+        android:layout_width="73dp"
+        android:layout_height="46dp"
+        android:text="Espécie:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPlanta" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinnerEspecie"
+        android:layout_width="336dp"
+        android:layout_height="46dp"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:padding="5dp"
+        app:hintText="Selecionar a Espécie"
+        app:layout_constraintStart_toEndOf="@+id/textEspecie"
+        app:layout_constraintStart_toStartOf="@+id/spinnerPlanta"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerPlanta" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="71dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/menuLinha"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEspecie" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinnerLinha"
+        android:layout_width="336dp"
+        android:layout_height="44dp"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:padding="5dp"
+        app:hintText="Selecionar a Linha"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toStartOf="@+id/spinnerEspecie"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEspecie" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="83dp"
+        android:layout_height="44dp"
+        android:text="Unidade de Negócio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinnerUnidade"
+        android:layout_width="336dp"
+        android:layout_height="47dp"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:padding="5dp"
+        app:hintText="Selecionar a Unidade"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLinha" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="complTela1"
+        android:text="Complemento"
+        app:icon="@drawable/ic_content_paste_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEstr" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="404dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <TextView
+        android:id="@+id/textDescr"
+        android:layout_width="79dp"
+        android:layout_height="41dp"
+        android:text="Descrição"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/editDescr"
+        android:layout_width="327dp"
+        android:layout_height="145dp"
+        android:ems="10"
+        android:hint="Descrição"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textDescr"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerUnidade" />
+
+    <TextView
+        android:id="@+id/textEstr"
+        android:layout_width="67dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:hint="Estrutura"
+        android:text="@string/menuEstrutura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDescr" />
+
+    <EditText
+        android:id="@+id/editEstr"
+        android:layout_width="308dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Estrutura"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textEstr"
+        app:layout_constraintTop_toBottomOf="@+id/editDescr" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

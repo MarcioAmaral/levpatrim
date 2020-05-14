@@ -3,38 +3,51 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<androidx.drawerlayout.widget.DrawerLayout
-    android:id="@+id/drawerLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?colorPrimary" />
-
-        <fragment
-            android:id="@+id/navHostFragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/nav_graph" />
-    </LinearLayout>
+            android:orientation="vertical">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navView"
-        app:menu="@menu/navdrawer_menu"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarLevant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?colorPrimary" />
 
-</androidx.drawerlayout.widget.DrawerLayout>
+            <fragment
+                android:id="@+id/navHostFragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="642dp"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/nav_graph" />
+
+            <Button
+                android:id="@+id/btnLevant"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:onClick="levantManut"
+                android:text="Levantamento"
+                app:icon="@drawable/ic_content_paste_black_24dp"
+                app:iconPadding="16dp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navdrawer_menu">
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

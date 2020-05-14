@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "f47c5911aa08fb2c7b731e2e7ec95767",
+    "identityHash": "15590e9733d6601bdebb944d36536deb",
     "entities": [
       {
         "tableName": "User",
@@ -65,12 +65,38 @@
         },
         "indices": [],
         "foreignKeys": []
+      },
+      {
+        "tableName": "Conta",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`contaId` TEXT NOT NULL, `descrConta` TEXT, PRIMARY KEY(`contaId`))",
+        "fields": [
+          {
+            "fieldPath": "contaId",
+            "columnName": "contaId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descrConta",
+            "columnName": "descrConta",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "contaId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
       }
     ],
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f47c5911aa08fb2c7b731e2e7ec95767')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '15590e9733d6601bdebb944d36536deb')"
     ]
   }
 }

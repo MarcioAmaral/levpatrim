@@ -17,8 +17,10 @@ class AuthViewModel(
 ) : ViewModel() {
 
     var name: String? = null
-    var email: String? = null
-    var password: String? = null
+    //var email: String? = null
+    var email = "marcio.amaral@gmail.com"
+    //var password: String? = null
+    var password: String? = "123456"
     var passwordconfirm: String? = null
 
     var authListener: AuthListener? = null
@@ -72,18 +74,13 @@ class AuthViewModel(
             authListener?.onFailure("Password did not match")
             return
         }
-        Log.d("FOLLOWING","Antes 06 - Coroutines.main")
+
         Coroutines.main {
             try {
                 val authResponse = repository.userSignup(name!!, email!!, password!!)
-                Log.d("FOLLOWING","Antes 07 - authResponse.user?.let")
                 authResponse.user?.let {
-                    Log.d("FOLLOWING","Antes 08 - authListener?.onSuccess(it)")
                     authListener?.onSuccess(it)
-                    Log.d("FOLLOWING","Antes 12 - Depois authListener?.onSuccess(it)")
-                    Log.d("FOLLOWING","Antes 13 - Antes repository.saveUser(it)")
                     repository.saveUser(it)
-                    Log.d("FOLLOWING","Antes 14 - Depois repository.saveUser(it)")
                     return@main
                 }
                 authListener?.onFailure(authResponse.message!!)

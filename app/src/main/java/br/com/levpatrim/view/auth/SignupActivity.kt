@@ -27,14 +27,10 @@ class SignupActivity : AppCompatActivity(), AuthListener, KodeinAware {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-Log.d("FOLLOWING","Antes 01 - ActivitySignupBinding")
         val binding: ActivitySignupBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_signup)
-        Log.d("FOLLOWING","Antes 02 - ViewModelProviders.of")
         val viewModel = ViewModelProviders.of(this, factory).get(AuthViewModel::class.java)
-        Log.d("FOLLOWING","Antes 03 - binding.viewmodel")
         binding.viewmodel = viewModel
-        Log.d("FOLLOWING","Antes 04 - viewModel.authListener")
         viewModel.authListener = this
 
      /*   viewModel.getLoggedInUser().observe(this, Observer { user ->
@@ -53,11 +49,8 @@ Log.d("FOLLOWING","Antes 01 - ActivitySignupBinding")
 
     override fun onSuccess(user: User) {
         progress_bar.hide()
-        Log.d("FOLLOWING","Antes 09 - Intent(this")
         Intent(this, HomeActivity::class.java).also {
-            Log.d("FOLLOWING","Depois 10 - Intent(this")
             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            Log.d("FOLLOWING","Depois 11 - it.flags")
             startActivity(it)
         }
     }

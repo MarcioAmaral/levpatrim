@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    tools:context=".view.levant.LevantCompl01Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/ic_content_paste_black_24dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Empresa Modelo"
+        app:titleMarginStart="100sp"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/textNAnt"
+        android:layout_width="86dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="68dp"
+        android:text="Num.Antigo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textIncorp"
+        android:layout_width="99dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="8dp"
+        android:text="Incorporação"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNAnt" />
+
+    <TextView
+        android:id="@+id/textTurno"
+        android:layout_width="47dp"
+        android:layout_height="20dp"
+        android:text="Turno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textIncorp" />
+
+    <TextView
+        android:id="@+id/textTecnico"
+        android:layout_width="66dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:text="Técnico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxImport" />
+
+    <TextView
+        android:id="@+id/textDescrPrincipal"
+        android:layout_width="409dp"
+        android:layout_height="70dp"
+        android:text="Descrição principal"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="387dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDescrPrincipal"
+        app:srcCompat="@drawable/camera" />
+
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Salvar"
+        app:icon="@drawable/ic_check_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editNAnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Núm.Antigo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textNAnt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editNAnt2"
+        android:layout_width="210dp"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Núm.Antigo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textIncorp"
+        app:layout_constraintTop_toBottomOf="@+id/editNAnt" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSucata"
+        android:layout_width="102dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Sucata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTurno" />
+
+    <CheckBox
+        android:id="@+id/checkBoxImport"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:text="Importado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSucata" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAtivo"
+        android:layout_width="99dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
+        android:text="Ativo"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSucata"
+        app:layout_constraintTop_toBottomOf="@+id/editNAnt2" />
+
+    <EditText
+        android:id="@+id/editTecnico"
+        android:layout_width="243dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Técnico"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textTecnico"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxImport" />
+
+    <Switch
+        android:id="@+id/switchManha"
+        android:layout_width="115dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="60dp"
+        android:text="Manhã"
+        app:layout_constraintStart_toStartOf="@+id/textTurno"
+        app:layout_constraintTop_toBottomOf="@+id/textIncorp" />
+
+    <Switch
+        android:id="@+id/switchTarde"
+        android:layout_width="112dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Tarde"
+        app:layout_constraintStart_toEndOf="@+id/switchManha"
+        app:layout_constraintTop_toBottomOf="@+id/editNAnt2" />
+
+    <Switch
+        android:id="@+id/switchNoite"
+        android:layout_width="103dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Noite"
+        app:layout_constraintStart_toEndOf="@+id/switchTarde"
+        app:layout_constraintTop_toBottomOf="@+id/editNAnt2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

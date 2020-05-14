@@ -1,6 +1,8 @@
 package br.com.levpatrim.view.home
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
@@ -11,6 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import br.com.levpatrim.R
 import br.com.levpatrim.databinding.ActivityHomeBinding
+import br.com.levpatrim.view.levant.LevantActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 
@@ -22,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding = DataBindingUtil.setContentView<ActivityHomeBinding>(this, R.layout.activity_home)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(toolbarLevant)
         drawerLayout = binding.drawerLayout
         val navController = this.findNavController(R.id.navHostFragment)
 
@@ -44,5 +47,10 @@ class HomeActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.navHostFragment)
         return NavigationUI.navigateUp(navController, appBarConfiguration)
+    }
+
+    fun levantManut(view: View) {
+        val intent = Intent(this, LevantActivity::class.java)
+        startActivity(intent)
     }
 }

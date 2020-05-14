@@ -1,50 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/menuConta"
-        android:icon="@drawable/ic_list_black_24dp"
+        android:icon="@drawable/ic_account_balance_black_24dp"
         android:iconTint="@color/colorPrimary"
         android:title="@string/menuConta" />
 
     <item
         android:id="@+id/menuLocal"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ic_location_city_black_24dp"
         android:iconTint="@color/colorPrimary"
         android:title="@string/menuLocal" />
 
     <item
         android:id="@+id/menuCCusto"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ic_local_atm_black_24dp"
         android:iconTint="@color/colorPrimary"
         android:title="@string/menuCentro_de_custo" />
 
     <item
         android:id="@+id/menuMarca"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ic_receipt_black_24dp"
         android:iconTint="@color/colorPrimary"
         android:title="@string/menuMarca" />
 
     <item
         android:id="@+id/menuModelo"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ic_style_black_24dp"
         android:iconTint="@color/colorPrimary"
         android:title="@string/menuModelo" />
 
     <item
         android:id="@+id/menuPlanta"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
         android:iconTint="@color/colorPrimary"
         android:title="@string/menuPlanta" />
 
     <item
         android:id="@+id/menuEspecie"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ic_adb_black_24dp"
         android:iconTint="@color/colorPrimary"
-        android:title="@string/menuEsp_cie" />
+        android:title="@string/menuEspecie" />
 
+    <item
+        android:id="@+id/menuUnidade"
+        android:icon="@drawable/ic_work_black_24dp"
+        android:iconTint="@color/colorPrimary"
+        android:title="@string/menuUnidade" />
+
+    <item
+        android:id="@+id/menuLinha"
+        android:icon="@drawable/ic_gamepad_black_24dp"
+        android:iconTint="@color/colorPrimary"
+        android:title="@string/menuLinha" />
+
+    <item
+        android:id="@+id/menuEmpresa"
+        android:icon="@drawable/ic_list_black_24dp"
+        android:iconTint="@color/colorPrimary"
+        android:title="@string/menuEmpresa" />
+
+    <item
+        android:id="@+id/menuUser"
+        android:icon="@drawable/ic_name"
+        android:iconTint="@color/colorPrimary"
+        android:title="User" />
 
 </menu>

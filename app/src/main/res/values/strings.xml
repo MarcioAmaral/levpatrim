@@ -6,5 +6,10 @@
     <string name="menuMarca">Marca</string>
     <string name="menuModelo">Modelo</string>
     <string name="menuPlanta">Planta</string>
-    <string name="menuEsp_cie">Espécie</string>
+    <string name="menuEspecie">Espécie</string>
+    <string name="menuUnidade">Unidade de negócio</string>
+    <string name="menuLinha">Linha</string>
+    <string name="menuEstrutura">Estrutura</string>
+    <string name="headTabelas">Tabelas</string>
+    <string name="menuEmpresa">Empresa</string>
 </resources>
