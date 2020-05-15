@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/root_layout"
         android:layout_width="match_parent"
-        android:background="#E2E2E2"
+        android:background="@color/colorTela"
         android:layout_height="match_parent"
         tools:context=".view.auth.LoginActivity">
 
@@ -112,6 +112,7 @@
                 <Button
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorButoon"
                     android:layout_gravity="center_horizontal"
                     android:onClick="@{viewmodel::onLoginButtonClick}"
                     android:text="Login"

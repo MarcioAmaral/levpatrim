@@ -17,7 +17,7 @@
                 android:id="@+id/toolbarLevant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?colorPrimary" />
+                android:background="@color/colorToolbar" />
 
             <fragment
                 android:id="@+id/navHostFragment"
@@ -31,7 +31,7 @@
                 android:id="@+id/btnLevant"
                 android:layout_width="match_parent"
                 android:layout_height="71dp"
-                android:backgroundTint="@color/colorPrimaryDark"
+                android:backgroundTint="@color/colorButoon"
                 android:onClick="levantManut"
                 android:text="Levantamento"
                 app:icon="@drawable/ic_content_paste_black_24dp"

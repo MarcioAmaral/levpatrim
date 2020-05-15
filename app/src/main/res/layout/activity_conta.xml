@@ -24,7 +24,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/ic_add_black_24dp"
-        app:backgroundTint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/colorButoon"
         app:layout_constraintBottom_toTopOf="@+id/linearLayouut"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -42,7 +42,7 @@
             android:id="@+id/materialButtonDeleteWord"
             android:layout_width="190dp"
             android:layout_height="match_parent"
-            android:backgroundTint="?attr/colorPrimaryDark"
+            android:backgroundTint="@color/colorButoon"
             android:text="Delete"
             app:icon="@drawable/ic_delete_sweep_black_24dp">
 
@@ -53,7 +53,7 @@
             android:layout_width="203dp"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
-            android:backgroundTint="@color/colorPrimaryDark"
+            android:backgroundTint="@color/colorButoon"
             android:text="Delete All"
             android:textSize="14sp"
             app:icon="@drawable/ic_create_black_24dp" />

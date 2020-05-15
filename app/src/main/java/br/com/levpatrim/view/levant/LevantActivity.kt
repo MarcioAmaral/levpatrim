@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.levant_activity.*
 
 class LevantActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.levant_activity)
@@ -31,15 +30,18 @@ class LevantActivity : AppCompatActivity() {
         sppinerLoadEspecie()
         sppinerLoadLinha()
         sppinerLoadUnidade()
+
     }
 
-    val searchablespinner_list: MutableList<String> = ArrayList()
 
-    //val searchablespinner = findViewById(R.id.spinnerConta) as SearchableSpinner
 
-    /*searchablespinner.setPositiveButton("Voltar");
 
-    searchablespinner_list.add("Samsung");
+    //val searchablespinner_list: MutableList<String> = ArrayList()
+
+   // val searchablespinner = findViewById(R.id.spinnerConta) as SearchableSpinner
+
+
+   /* searchablespinner_list.add("Samsung");
     searchablespinner_list.add("Nokia");
 
     searchablespinner.setAdapter(
@@ -59,6 +61,7 @@ class LevantActivity : AppCompatActivity() {
         val myStrings = arrayOf("001 - Máquinas", "068 - Equipamentos", "010 - Veículos", "015 - Móveis Utensílios")
         //Adapter for spinner
         spinnerConta.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, myStrings)
+
     }
     fun sppinerLoadCusto() {
         //String array.

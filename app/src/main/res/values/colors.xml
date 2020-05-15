@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#969EEE</color>
-    <color name="colorPrimaryDark">#555C96</color>
-    <color name="colorAccent">#969EEE</color>
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#0C0C0C</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorTela">#FF5722</color>
+    <color name="colorToolbar">#FF5722</color>
+    <color name="colorButoon">#FF5722</color>
+    <color name="colorTitle">#FF5722</color>
 </resources>
